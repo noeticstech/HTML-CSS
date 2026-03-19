@@ -1,0 +1,70 @@
+/* Lesson 4: Units
+   Styles Html_notes/lesson4.html using:
+   px, rem, %, vh, and vw.
+*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 90%;
+    max-width: 60rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef4ff;
+    color: #1f2937;
+}
+
+h1 {
+    width: 70vw;
+    max-width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+}
+
+p {
+    width: 85%;
+    max-width: 40rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    width: 100%;
+    max-width: 32rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 12px 28px rgba(30, 58, 138, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #94a3b8;
+    border-radius: 0.75rem;
+}
+
+input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.35rem 0 1rem;
+}
+
+br {
+    display: none;
+}

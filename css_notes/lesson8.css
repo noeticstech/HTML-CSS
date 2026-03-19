@@ -1,0 +1,50 @@
+/* Lesson 8: What To Skip For Now
+   Topic goal: protect your focus.
+
+   When learning CSS for the first time,
+   you do not need to study everything.
+
+   Skip these for now:
+   1. deep color theory
+   2. complex selectors
+   3. advanced animations
+   4. very long clone projects
+   5. rarely used properties
+
+   Why skip them:
+   They consume time but do not give strong beginner results.
+   First learn layout, spacing, responsiveness, and simple effects.
+*/
+
+/* Focus path for now:
+   box model
+   flexbox
+   positioning
+   units
+   responsive design
+   grid basics
+   transitions
+*/
+
+/* This file is notes-focused on purpose.
+   The styles below are only simple reminder classes.
+*/
+.learn-now {
+    padding: 16px;
+    border: 2px solid #16a34a;
+    background-color: #f0fdf4;
+}
+
+.skip-for-now {
+    padding: 16px;
+    border: 2px solid #dc2626;
+    background-color: #fef2f2;
+}
+
+/* Beginner roadmap:
+   1. Master box model first.
+   2. Then practice flexbox every day.
+   3. Then learn responsive layout with media queries.
+   4. Add positioning and grid after that.
+   5. Use transitions only as light polish.
+*/

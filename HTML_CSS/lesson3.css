@@ -1,0 +1,90 @@
+/* Lesson 3: Positioning
+   Styles Html_notes/lesson3.html using:
+   relative, absolute, fixed, sticky, and z-index.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 96px 20px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    position: relative;
+}
+
+body::before {
+    content: "Fixed note";
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 3;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+h1 {
+    position: sticky;
+    top: 14px;
+    z-index: 2;
+    margin: 0 0 20px;
+    padding: 18px 22px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+p:first-of-type {
+    position: relative;
+    left: 12px;
+}
+
+form {
+    position: relative;
+    margin-top: 24px;
+    padding: 28px 22px 22px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 18px;
+}
+
+form::after {
+    content: "absolute badge";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 6px 0 14px;
+    padding: 12px 14px;
+    border: 1px solid #94a3b8;
+    border-radius: 10px;
+}
+
+br {
+    display: none;
+}

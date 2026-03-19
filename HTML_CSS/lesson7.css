@@ -1,0 +1,86 @@
+/* Lesson 7: Transitions
+   Styles Html_notes/lesson7.html using:
+   transition and transform for simple UI effects.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+}
+
+header,
+section,
+footer {
+    width: min(92%, 64rem);
+    margin: 1.2rem auto;
+    padding: 1.4rem;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover,
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    transform: scale(1.01);
+}
+
+input[type="submit"] {
+    width: auto;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.85rem;
+    border: 1px solid #cbd5e1;
+}
+
+tbody tr {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: #eff6ff;
+    transform: translateX(6px);
+}

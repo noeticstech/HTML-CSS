@@ -1,0 +1,98 @@
+/* Lesson 3: Positioning
+   Topic goal: control where elements sit on the page.
+
+   Position values to learn:
+   1. static   -> default browser behavior
+   2. relative -> stays in normal flow, but can move from its spot
+   3. absolute -> positioned relative to the nearest positioned ancestor
+   4. fixed    -> stays fixed on the screen
+   5. sticky   -> acts normal, then sticks while scrolling
+   6. z-index  -> controls which element appears on top
+
+   Why this matters:
+   Positioning is used in navbars, dropdowns, modals, badges, and overlays.
+*/
+
+/* relative keeps the element in normal flow.
+   top, left, right, bottom can move it visually.
+*/
+.notice {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: #fef3c7;
+    padding: 12px;
+}
+
+/* This parent is marked relative so an absolute child can use it. */
+.profile-card {
+    position: relative;
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+/* absolute removes the element from normal flow.
+   It is placed using top/right/bottom/left.
+*/
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* fixed sticks to the browser window.
+   Good for floating buttons or fixed navbars.
+*/
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* sticky behaves like normal content at first.
+   It sticks when the page reaches the given offset.
+*/
+.sidebar-title {
+    position: sticky;
+    top: 20px;
+    background-color: #e2e8f0;
+    padding: 12px;
+}
+
+/* z-index controls stacking order.
+   Bigger z-index usually appears on top.
+   It works on positioned elements.
+*/
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    z-index: 10;
+}
+
+.modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 24px;
+    z-index: 20;
+}
+
+/* Beginner tips:
+   1. Use relative on the parent before using absolute on the child.
+   2. fixed is relative to the browser window.
+   3. sticky needs a top value like top: 0 or top: 20px.
+   4. If z-index is not working, check whether the element is positioned.
+*/
+

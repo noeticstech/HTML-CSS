@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 - Registration Form</title>
+    <link rel="stylesheet" href="../HTML_CSS/lesson4.css">
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <p>Please fill in your basic details.</p>
+    <p>This project will help you learn HTML step by step.</p>
+
+    <form>
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Enter your name"><br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Enter your email"><br>
+
+        <!-- 1. type password hides the typed text. -->
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="Enter your password"><br>
+
+        <!-- 2. radio lets the user choose one option from a group. -->
+        Gender:
+        <input id="male" type="radio" name="gender">
+        <label for="male">Male</label>
+        <input id="female" type="radio" name="gender">
+        <label for="female">Female</label><br>
+    </form>
+</body>
+</html>

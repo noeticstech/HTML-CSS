@@ -1,0 +1,53 @@
+/* Lesson 7: Transitions
+   Topic goal: add small motion to UI without overdoing it.
+
+   Learn:
+   1. transition
+   2. transform: scale(...)
+   3. transform: translate(...)
+
+   Keep this simple.
+   You do not need advanced animations right now.
+*/
+
+/* transition tells the browser to animate change smoothly.
+   Syntax:
+   transition: property duration timing-function;
+*/
+.button {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* translate moves an element from its original position. */
+.card {
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.12);
+}
+
+/* Important note:
+   Put transition on the normal state, not only on :hover.
+   That way hover in and hover out both animate smoothly.
+*/
+
+/* Beginner tips:
+   1. Use transition for buttons, cards, and links.
+   2. Keep duration short like 0.2s to 0.4s.
+   3. Use transform instead of changing top/left for simple motion.
+   4. Do not animate too many things at once.
+*/
+

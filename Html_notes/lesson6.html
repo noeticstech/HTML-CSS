@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 - Registration Form</title>
+    <link rel="stylesheet" href="../HTML_CSS/lesson6.css">
+</head>
+<body>
+    <header>
+        <!-- 1. div is a container that groups content. -->
+        <div class="page-title">
+            <h1>Student Registration Form</h1>
+            <p>Please fill in your basic details.</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Personal Details</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input id="name" type="text" placeholder="Enter your name"><br>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="Enter your email"><br>
+
+                <label for="password">Password:</label>
+                <input id="password" type="password" placeholder="Enter your password"><br>
+
+                Gender:
+                <input id="male" type="radio" name="gender">
+                <label for="male">Male</label>
+                <input id="female" type="radio" name="gender">
+                <label for="female">Female</label><br>
+
+                Subjects:
+                <input id="html" type="checkbox">
+                <label for="html">HTML</label>
+                <input id="css" type="checkbox">
+                <label for="css">CSS</label><br>
+
+                <!-- 2. select creates a dropdown. option is one choice. -->
+                <label for="city">City:</label>
+                <select id="city">
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Bangalore</option>
+                </select><br>
+
+                <!-- 3. textarea is used for multi-line text. -->
+                <label for="about">About You:</label>
+                <textarea id="about" rows="4" cols="30" placeholder="Write about yourself"></textarea>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Practice lesson 6</p>
+    </footer>
+</body>
+</html>

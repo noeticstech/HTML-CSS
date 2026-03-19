@@ -1,0 +1,52 @@
+/* CSS Starter File
+   Use this file when you want one simple place to practice CSS.
+   Your detailed study notes are inside lesson1.css to lesson8.css.
+*/
+
+/* 1. Reset the default browser spacing. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Make scrolling smooth when using anchor links. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. Basic page styling. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    padding: 20px;
+}
+
+/* 4. Reusable container class. */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 5. Basic card style. */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 6. Basic button style. */
+.button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+}

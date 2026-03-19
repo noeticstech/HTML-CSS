@@ -1,0 +1,85 @@
+/* Lesson 4: Units
+   Topic goal: use only the important CSS units for now.
+
+   Units to learn:
+   1. px
+   2. rem
+   3. %
+   4. vh
+   5. vw
+
+   Ignore other units for now.
+*/
+
+/* px means pixels.
+   Use it when you want exact control.
+   Common for borders, small spacing, and icon sizes.
+*/
+.icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #334155;
+}
+
+/* rem is relative to the root font size.
+   If browser default is 16px:
+   1rem = 16px
+   2rem = 32px
+
+   rem is great for text, spacing, and scalable layouts.
+*/
+html {
+    font-size: 16px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section {
+    padding: 1.5rem;
+}
+
+/* % means percentage of the parent size.
+   Very useful for fluid widths.
+*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+}
+
+/* vh means viewport height.
+   100vh = full visible screen height.
+*/
+.hero {
+    min-height: 100vh;
+    background-color: #dbeafe;
+}
+
+/* vw means viewport width.
+   100vw = full visible screen width.
+*/
+.banner {
+    width: 100vw;
+    background-color: #bfdbfe;
+}
+
+/* Practical advice:
+   1. Use px for borders and small exact sizes.
+   2. Use rem for text and spacing.
+   3. Use % for widths inside containers.
+   4. Use vh for full-screen sections.
+   5. Use vw carefully because it can sometimes cause horizontal scroll.
+*/
+
+/* Beginner tips:
+   1. If text should scale more naturally, prefer rem over px.
+   2. If a child should fill its parent width, use 100%.
+   3. If a section should fill the screen, try 100vh.
+*/
+

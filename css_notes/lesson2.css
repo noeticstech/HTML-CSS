@@ -1,0 +1,114 @@
+/* Lesson 2: Flexbox
+   Topic goal: learn the layout tool used for most UI rows and columns.
+
+   Flexbox works on a parent container.
+   When you write display: flex on the parent,
+   its direct children become flex items.
+
+   Main properties to learn now:
+   1. display: flex
+   2. justify-content
+   3. align-items
+   4. flex-direction
+   5. flex-wrap
+   6. gap
+
+   Why this matters:
+   Flexbox is used for navbars, buttons, cards, forms, and page sections.
+*/
+
+/* Step 1: Turn the parent into a flex container. */
+.row {
+    display: flex;
+}
+
+/* Step 2: justify-content controls left-right space in a row.
+   Common values:
+   flex-start   -> items stay at the start
+   center       -> items move to center
+   space-between-> first and last go to edges
+   space-around -> even space around items
+*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #e0f2fe;
+}
+
+/* Step 3: align-items controls up-down alignment in a row. */
+.hero-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 16px;
+    background-color: #f8fafc;
+}
+
+/* Step 4: flex-direction changes the direction.
+   row    -> horizontal
+   column -> vertical
+*/
+.column-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Step 5: flex-wrap lets items move to the next line if needed.
+   Without wrap, items keep trying to fit in one line.
+*/
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card-item {
+    width: 220px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+/* gap adds clean spacing between flex items.
+   It is better than giving margin to every child in many layouts.
+*/
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Very common center pattern:
+   This centers content both horizontally and vertically.
+*/
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    background-color: #dbeafe;
+}
+
+/* Quick memory trick:
+   justify-content -> controls the main axis
+   align-items     -> controls the cross axis
+
+   If flex-direction is row:
+   main axis  = left to right
+   cross axis = top to bottom
+
+   If flex-direction is column:
+   main axis  = top to bottom
+   cross axis = left to right
+*/
+
+/* Beginner tips:
+   1. Put display: flex on the parent, not the child.
+   2. Use gap for spacing between items.
+   3. Use justify-content for horizontal distribution in rows.
+   4. Use align-items for vertical alignment in rows.
+   5. Use flex-wrap when cards are breaking on smaller screens.
+*/
+

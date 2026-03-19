@@ -1,0 +1,80 @@
+/* Lesson 5: Responsive Design
+   Topic goal: make layouts work on phones, tablets, and desktops.
+
+   Two ideas to learn:
+   1. mobile-first approach
+   2. media queries
+
+   Mobile-first means:
+   Write the small-screen style first.
+   Then add bigger-screen changes later with min-width.
+*/
+
+/* Base style for mobile screens first. */
+.page {
+    padding: 16px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet and up:
+   When screen width is 768px or more,
+   change the layout.
+*/
+@media (min-width: 768px) {
+    .page {
+        padding: 24px;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 8px);
+    }
+}
+
+/* Desktop and up:
+   When screen width is 1024px or more,
+   show 3 cards in one row.
+*/
+@media (min-width: 1024px) {
+    .page {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: calc(33.333% - 11px);
+    }
+}
+
+/* Why media queries matter:
+   Without them, desktop layouts can break on phones.
+   Responsive CSS is required for real-world websites.
+*/
+
+/* Beginner tips:
+   1. Start with phone layout first.
+   2. Add min-width media queries for larger screens.
+   3. Use max-width: 100% on images.
+   4. Test your page by shrinking the browser window.
+*/
+
