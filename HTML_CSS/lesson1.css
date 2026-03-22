@@ -12,7 +12,7 @@ body {
     margin: 40px auto;
     padding: 24px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7fb;
+    background-color: #8ca7cb;
     color: #1f2937;
 }
 
@@ -31,6 +31,6 @@ p {
     margin: 0 0 18px;
     padding: 18px 20px;
     border-left: 6px solid #60a5fa;
-    background-color: #ffffff;
+    background-color: #e3dbdb;
     border-radius: 12px;
 }
