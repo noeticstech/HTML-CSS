@@ -1,0 +1,325 @@
+/* Global reset:
+   Applies box-sizing so padding and border stay inside width/height. */
+* {
+  box-sizing: border-box;
+}
+
+/* Lesson 4 units:
+   - px for borders and shadows
+   - rem for spacing and font size
+   - % and vw for fluid widths
+   - vh for full-screen height */
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 5.5rem 1.25rem 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #dbeafe 48%, #eef4ff 100%);
+  color: #1f2937;
+}
+
+/* Fixed positioning keeps this note visible while the page scrolls. */
+.fixed-note {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  border: 2px solid #0f172a;
+  border-radius: 999px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Header uses sticky positioning from your notes. */
+header {
+  width: min(92%, 75rem);
+  margin: 0 auto 1.5rem;
+  position: sticky;
+  top: 0.8rem;
+  z-index: 5;
+}
+
+/* Box model:
+   margin, padding, border, width, and border-radius are all visible here. */
+.page-title {
+  width: 100%;
+  padding: 1.5rem;
+  border: 3px solid #93c5fd;
+  border-radius: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.12);
+
+  /* Flexbox:
+     Stacks text and image with spacing. */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page-title h1,
+.page-title p {
+  margin: 0;
+}
+
+.page-title img {
+  width: min(45vw, 220px);
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #dbeafe;
+  border-radius: 1rem;
+}
+
+/* Main layout uses CSS Grid from lesson 6. */
+main {
+  width: min(92%, 75rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Shared card styling keeps the design simple and readable. */
+.card {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+
+  /* Transitions from lesson 7. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+  border-color: #93c5fd;
+}
+
+.section-copy,
+.message-box,
+.preview-grid p,
+.footer-card p {
+  margin: 0;
+}
+
+/* The form itself uses grid so labels and inputs stay organized. */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+label,
+.field-label {
+  font-weight: 700;
+}
+
+/* A flex row groups radios, checkboxes, and buttons. */
+.field-row,
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+  color: #1f2937;
+  font: inherit;
+
+  /* Smooth hover/focus effects. */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.25s ease, background-color 0.25s ease;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  transform: scale(1.01);
+}
+
+input[type="submit"],
+button {
+  width: auto;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.message-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 6px solid #60a5fa;
+  border-radius: 0.9rem;
+  background-color: #eff6ff;
+  line-height: 1.5;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.preview-grid p {
+  padding: 0.9rem;
+  border: 1px solid #dbeafe;
+  border-radius: 0.9rem;
+  background-color: #f8fbff;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Table styles from lessons 7 and 8. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 0.85rem;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+tbody tr {
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+tbody tr:hover {
+  background-color: #eff6ff;
+  transform: translateX(6px);
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}
+
+a {
+  color: #2563eb;
+}
+
+iframe,
+video {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
+.footer-card {
+  width: min(92%, 75rem);
+  margin: 1.25rem auto 0;
+}
+
+/* Responsive design:
+   The layout becomes two columns on larger screens. */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .planner-card,
+  .fee-card,
+  .footer-card {
+    grid-column: 1 / -1;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  textarea,
+  .field-row,
+  .button-row,
+  .message-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-top: 6rem;
+  }
+
+  main {
+    width: min(90%, 80rem);
+  }
+
+  header,
+  .footer-card {
+    width: min(90%, 80rem);
+  }
+}

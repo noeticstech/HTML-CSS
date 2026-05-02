@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Hub Project</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Fixed note:
+         This helps demonstrate CSS position: fixed from your notes. -->
+    <div class="fixed-note">Practice project using your notes</div>
+
+    <!-- header is the top section of the page -->
+    <header id="top-header">
+      <!-- div groups related content together -->
+      <div class="page-title">
+        <h1 id="main-title">Web Dev Learning Hub</h1>
+        <p id="intro-text">
+          This project combines the main HTML, CSS, and JavaScript concepts from
+          your notes into one different example.
+        </p>
+
+        <!-- img shows an image on the page -->
+        <img
+          src="../Html_notes/World.png"
+          alt="World map "
+          width="220"
+          height="220"
+        />
+      </div>
+    </header>
+
+    <!-- main contains the main content of the page -->
+    <main>
+      <!-- section groups related content -->
+      <section class="card planner-card" id="planner-card">
+        <h2>Study Planner Form</h2>
+        <p class="section-copy">
+          Fill this form to build a small study plan. JavaScript will read your
+          input, update a live preview, create new task items, and remove this
+          card when you ask it to.
+        </p>
+
+        <!-- form collects user input -->
+        <form id="study-form">
+          <label for="name-input">Student Name</label>
+          <input
+            id="name-input"
+            type="text"
+            placeholder="Enter your name"
+          />
+
+          <label for="email-input">Email</label>
+          <input
+            id="email-input"
+            type="email"
+            placeholder="Enter your email"
+          />
+
+          <!-- password hides typed characters -->
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Create a password"
+          />
+
+          <div class="field-row">
+            <span class="field-label">Choose one track</span>
+
+            <!-- radio lets the user pick one option from a group -->
+            <label for="track-frontend" class="choice">
+              <input id="track-frontend" type="radio" name="track" checked />
+              Frontend
+            </label>
+
+            <label for="track-basics" class="choice">
+              <input id="track-basics" type="radio" name="track" />
+              Basics
+            </label>
+          </div>
+
+          <div class="field-row">
+            <span class="field-label">Pick your subjects</span>
+
+            <!-- checkbox lets the user pick multiple options -->
+            <label for="subject-html" class="choice">
+              <input id="subject-html" type="checkbox" checked />
+              HTML
+            </label>
+
+            <label for="subject-css" class="choice">
+              <input id="subject-css" type="checkbox" checked />
+              CSS
+            </label>
+
+            <label for="subject-js" class="choice">
+              <input id="subject-js" type="checkbox" />
+              JavaScript
+            </label>
+          </div>
+
+          <!-- select creates a dropdown -->
+          <label for="city">Study City</label>
+          <select id="city">
+            <!-- option is one choice inside select -->
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+          </select>
+
+          <!-- textarea is used for multi-line text -->
+          <label for="about">About Your Goal</label>
+          <textarea
+            id="about"
+            rows="5"
+            cols="30"
+            placeholder="Write what you want to learn"
+          ></textarea>
+
+          <div class="button-row">
+            <!-- submit creates a form button -->
+            <input id="submit-btn" type="submit" value="Save Plan" />
+            <button type="button" id="show-btn">Show Name</button>
+            <button type="button" id="add-item-btn">Add Study Task</button>
+            <button type="button" id="remove-btn">Remove Planner Card</button>
+          </div>
+        </form>
+
+        <p id="output" class="message-box">
+          Your actions and form messages will appear here.
+        </p>
+      </section>
+
+      <section class="card overview-card">
+        <h2>Live Preview</h2>
+        <p id="result" class="message-box">
+          JavaScript will update this area using `querySelector()` and
+          `textContent`.
+        </p>
+
+        <div id="html-box" class="message-box">
+          This box will be updated with <code>innerHTML</code>.
+        </div>
+
+        <div id="style-box" class="message-box">
+          This box will receive inline styles from JavaScript.
+        </div>
+
+        <div class="preview-grid">
+          <p><strong>Name:</strong> <span id="preview-name">Not saved yet</span></p>
+          <p><strong>Email:</strong> <span id="preview-email">Not saved yet</span></p>
+          <p><strong>Track:</strong> <span id="preview-track">Not saved yet</span></p>
+          <p><strong>City:</strong> <span id="preview-city">Not saved yet</span></p>
+        </div>
+
+        <h3>Study Tasks</h3>
+        <ul id="task-list">
+          <li class="topic">Revise HTML semantic tags</li>
+          <li class="topic">Practice CSS layout systems</li>
+        </ul>
+        <p id="count-text">Button clicks: 0</p>
+      </section>
+
+      <!-- section with table from your notes -->
+      <section class="card fee-card">
+        <h2>Course Fee Table</h2>
+
+        <!-- table shows data in rows and columns -->
+        <table>
+          <caption>
+            Beginner course fees
+          </caption>
+          <thead>
+            <tr>
+              <th colspan="2">Fee Details</th>
+            </tr>
+            <tr>
+              <th>Course</th>
+              <th>Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>1200</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>1500</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- article is a complete content block -->
+      <article class="card guide-card">
+        <h2>How To Use This Project</h2>
+
+        <!-- ol creates a numbered list -->
+        <ol>
+          <li>Read the HTML comments to understand each tag.</li>
+          <li>Read the CSS comments to connect styles with concepts.</li>
+          <li>Open the browser console and test the JavaScript interactions.</li>
+        </ol>
+
+        <!-- pre keeps spaces and line breaks exactly as written -->
+        <pre>
+Study Flow
+1. Fill the form
+2. Click "Save Plan"
+3. Add study tasks
+4. Observe DOM changes
+        </pre>
+      </article>
+
+      <!-- aside is extra content related to the page -->
+      <aside class="card extras-card">
+        <h2>Extra Practice Area</h2>
+        <p>
+          Open more resources:
+          <a href="https://developer.mozilla.org/" target="_blank"
+            >MDN Web Docs</a
+          >
+          and
+          <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
+        </p>
+
+        <!-- iframe shows another page inside this page -->
+        <iframe
+          src="https://www.example.com"
+          title="Example website preview"
+          loading="lazy"
+        ></iframe>
+
+        <!-- video shows a video player on the page -->
+        <video controls loop>
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </aside>
+    </main>
+
+    <!-- footer is the bottom part of the page -->
+    <footer class="card footer-card">
+      <p id="footer-note">Built as a different project from your lessons.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

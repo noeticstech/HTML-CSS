@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM8 - remove</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f8fafc;
+      }
+
+      .box {
+        max-width: 720px;
+        background: #ffffff;
+        padding: 24px;
+        border: 1px solid #dbe3ef;
+        border-radius: 12px;
+      }
+
+      #card {
+        margin: 16px 0;
+        padding: 16px;
+        border: 1px solid #93c5fd;
+        border-radius: 10px;
+        background: #eff6ff;
+      }
+
+      button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        background: #0f4c81;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p><a href="./index.html">Back to DOM Notes</a></p>
+      <h1>DOM8: remove()</h1>
+      <p>This example removes an element from the page.</p>
+
+      <div id="card">This card can be removed.</div>
+      <button id="remove-btn">Remove card</button>
+      <p id="status">The card is still on the page.</p>
+    </div>
+
+    <script src="./DOM8.js"></script>
+  </body>
+</html>

@@ -6,8 +6,9 @@ const url = "https://catfact.ninja/fact";
 
 const getFacts = async () => {
   const response = await fetch(url);
-    const data = await response.json();
-    console.log(data.fact);
+  
+  const data = await response.json();
+  console.log(data);
 };
 
 getFacts();
